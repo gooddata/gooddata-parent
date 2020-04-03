@@ -155,6 +155,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
 		    <source>${targetJavaRelease}</source>
+		    <doclint>none</doclint>
                 </configuration>
             </plugin>
             <plugin>
