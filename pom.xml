@@ -17,7 +17,7 @@
     <description>Helps GoodData open source Maven projects to be released into the public Central repository</description>
 
     <properties>
-        <targetJavaRelease>11</targetJavaRelease>
+        <targetJavaRelease>8</targetJavaRelease>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
