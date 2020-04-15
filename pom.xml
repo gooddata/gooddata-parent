@@ -95,7 +95,7 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
-                                    <version>${targetJavaRelease}</version>
+                                    <version>11</version>
                                 </requireJavaVersion>
                                 <requireMavenVersion>
                                     <version>${minimal.required.maven.version}</version>
