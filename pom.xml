@@ -184,14 +184,16 @@ LICENSE.txt file in the root directory of this source tree.
                         <currentYear>${currentYear}</currentYear>
                     </properties>
                     <includes>
-                        <include>**/*.java</include>
-                        <include>**/*.scala</include>
-                        <include>**/*.groovy</include>
+                        <include>src/**/*.java</include>
+                        <include>src/**/*.scala</include>
+                        <include>src/**/*.groovy</include>
+                        <include>src/**/*.kt</include>
                     </includes>
                     <mapping>
                         <java>SLASHSTAR_STYLE</java>
                         <scala>SLASHSTAR_STYLE</scala>
                         <groovy>SLASHSTAR_STYLE</groovy>
+                        <kt>SLASHSTAR_STYLE</kt>
                     </mapping>
                 </configuration>
                 <executions>
