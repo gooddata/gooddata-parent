@@ -1,5 +1,12 @@
 # Release notes
 
+## 3.0.0
+* Simplify license headers.
+** No need to update year on change.
+* Include only files under src/ for license check.
+** Maven should not check files which are not part of the build check of child modules is ensured using multimodule build (we don't use aggregate setting in license plugin).
+* Add Kotlin source files to license header includes.
+
 ## 2.0.3
 * Set only build to require java 11 the release target switched back to 8
 
