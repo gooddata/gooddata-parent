@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
+  ~ (C) 2017 GoodData Corporation.
   ~ This source code is licensed under the BSD-style license found in the
   ~ LICENSE.txt file in the root directory of this source tree.
   -->
@@ -173,7 +173,7 @@
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
                 <configuration>
-                    <inlineHeader>Copyright (C) ${inceptionYear}-${currentYear}, GoodData(R) Corporation. All rights reserved.
+                    <inlineHeader>(C) ${currentYear} GoodData Corporation.
 This source code is licensed under the BSD-style license found in the
 LICENSE.txt file in the root directory of this source tree.
                     </inlineHeader>
@@ -181,18 +181,19 @@ LICENSE.txt file in the root directory of this source tree.
                     <failIfUnknown>true</failIfUnknown>
                     <skipExistingHeaders>true</skipExistingHeaders>
                     <properties>
-                        <inceptionYear>2007</inceptionYear>
                         <currentYear>${currentYear}</currentYear>
                     </properties>
                     <includes>
-                        <include>**/*.java</include>
-                        <include>**/*.scala</include>
-                        <include>**/*.groovy</include>
+                        <include>src/**/*.java</include>
+                        <include>src/**/*.scala</include>
+                        <include>src/**/*.groovy</include>
+                        <include>src/**/*.kt</include>
                     </includes>
                     <mapping>
                         <java>SLASHSTAR_STYLE</java>
                         <scala>SLASHSTAR_STYLE</scala>
                         <groovy>SLASHSTAR_STYLE</groovy>
+                        <kt>SLASHSTAR_STYLE</kt>
                     </mapping>
                 </configuration>
                 <executions>
