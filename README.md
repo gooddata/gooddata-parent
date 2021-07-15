@@ -1,4 +1,4 @@
-# GoodData OSS Parent POM
+# GoodData OSS Parent POM [![Build Status](https://github.com/gooddata/gooddata-parent/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/gooddata/gooddata-parent/actions/workflows/build.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.gooddata/gooddata-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.gooddata/gooddata-parent) [![Release](https://img.shields.io/github/v/release/gooddata/gooddata-parent.svg)](https://search.maven.org/artifact/com.gooddata/gooddata-parent)
 
 All open source GoodData Maven projects *should* directly or indirectly inherit from `gooddata-parent` POM.
 
