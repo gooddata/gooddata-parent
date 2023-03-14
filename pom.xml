@@ -278,7 +278,7 @@ LICENSE.txt file in the root directory of this source tree.
                 </plugin>
                 <plugin>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.22.2</version>
+                    <version>3.0.0</version>
                     <executions>
                         <execution>
                             <goals>
