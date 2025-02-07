@@ -24,7 +24,7 @@
         <maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
         <currentYear>${maven.build.timestamp}</currentYear>
         <arguments />
-        <minimal.required.maven.version>3.9.5</minimal.required.maven.version>
+        <minimal.required.maven.version>3.5.4</minimal.required.maven.version>
         <failOnUndeclaredDependencies>true</failOnUndeclaredDependencies>
     </properties>
 
