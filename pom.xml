@@ -13,14 +13,14 @@
     <packaging>pom</packaging>
 
     <name>GoodData OSS Parent</name>
-    <url>http://central.sonatype.org/pages/ossrh-guide.html</url>
+    <url>https://central.sonatype.org</url>
     <description>Helps GoodData open source Maven projects to be released into the public Central repository</description>
 
     <properties>
         <targetJavaRelease>17</targetJavaRelease>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+        <centralPortalSnapshotsUrl>https://central.sonatype.com/api/v1/publisher/deployments/</centralPortalSnapshotsUrl>
         <maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
         <currentYear>${maven.build.timestamp}</currentYear>
         <arguments />
@@ -56,9 +56,9 @@
 
     <repositories>
         <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+            <id>central-portal-snapshots</id>
+            <name>Central Portal Snapshots</name>
+            <url>${centralPortalSnapshotsUrl}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -70,14 +70,14 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+            <id>central-portal-snapshots</id>
+            <name>Central Portal</name>
+            <url>https://central.sonatype.com/api/v1/publisher/deployments/</url>
         </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>central-portal-staging</id>
+            <name>Central Portal</name>
+            <url>https://central.sonatype.com/api/v1/publisher/deployments/</url>
         </repository>
     </distributionManagement>
 
@@ -159,13 +159,13 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>sonatype-nexus-staging</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <serverId>central-portal-staging</serverId>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
                 </configuration>
             </plugin>
             <plugin>
@@ -229,7 +229,7 @@ LICENSE.txt file in the root directory of this source tree.
                     <configuration>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <useReleaseProfile>false</useReleaseProfile>
-                        <arguments>${arguments} -Psonatype-oss-release</arguments>
+                        <arguments>${arguments} -Pcentral-portal-release</arguments>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -297,9 +297,9 @@ LICENSE.txt file in the root directory of this source tree.
                     <version>3.5.0</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>1.6.13</version>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>0.5.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.mycila</groupId>
@@ -312,7 +312,7 @@ LICENSE.txt file in the root directory of this source tree.
 
     <profiles>
         <profile>
-            <id>sonatype-oss-release</id>
+            <id>central-portal-release</id>
             <build>
                 <plugins>
                     <plugin>
