@@ -9,7 +9,7 @@
 
     <groupId>com.gooddata</groupId>
     <artifactId>gooddata-parent</artifactId>
-    <version>4.0.1-SNAPSHOT</version>
+    <version>4.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>GoodData OSS Parent</name>
