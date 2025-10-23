@@ -163,7 +163,7 @@
                 <artifactId>central-publishing-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>central-portal-staging</serverId>
+                    <publishingServerId>central-portal-staging</publishingServerId>
                     <autoPublish>true</autoPublish>
                     <waitUntil>published</waitUntil>
                 </configuration>
@@ -299,7 +299,7 @@ LICENSE.txt file in the root directory of this source tree.
                 <plugin>
                     <groupId>org.sonatype.central</groupId>
                     <artifactId>central-publishing-maven-plugin</artifactId>
-                    <version>0.5.0</version>
+                    <version>0.9.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.mycila</groupId>
