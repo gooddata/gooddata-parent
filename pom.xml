@@ -9,7 +9,7 @@
 
     <groupId>com.gooddata</groupId>
     <artifactId>gooddata-parent</artifactId>
-    <version>4.0.4</version>
+    <version>4.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>GoodData OSS Parent</name>
@@ -32,7 +32,7 @@
         <connection>scm:git:git@github.com:gooddata/gooddata-parent.git</connection>
         <developerConnection>scm:git:git@github.com:gooddata/gooddata-parent.git</developerConnection>
         <url>https://github.com/gooddata/gooddata-parent</url>
-      <tag>gooddata-parent-4.0.4</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <licenses>
